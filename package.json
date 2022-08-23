@@ -1,0 +1,16 @@
+{
+  "name": "airplane-pro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d site"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://00sand.github.io/travelclub",
+  "dependencies": {
+    "gh-pages": "^4.0.0"
+  }
+}

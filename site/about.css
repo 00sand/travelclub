@@ -1,0 +1,644 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.bottom-nav a {
+    color: white;
+}
+
+.intro {
+
+    position: relative;
+
+}
+
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.6em;
+    background-color: white;
+}
+
+
+.nav-butt {
+    background-color: #f76922;
+    padding: 1em 2em 1em 2em;
+    border-radius: 100px;
+    border: white;
+    color: white;
+}
+
+
+.nav-butt:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.nav-butt:active {
+    transform: scale(1.1, 1.1);
+    filter: sepia(0.5);
+}
+
+
+
+
+.nav-links a {
+    color: #f76922;
+    font-size: 1.2em;
+}
+
+.nav-butt a {
+    color: white;
+}
+
+
+nav img {
+    width: 50px;
+    height: auto;
+    position: absolute;
+    left: 8%;
+    top: 1.8%;
+}
+
+.nav-links {
+    display: inline-flex;
+    list-style-type: none;
+    width: 70%;
+    justify-content: space-around;
+}
+
+
+.nav-links li:nth-child(1) {
+    padding-top: 1em;
+}
+
+.nav-links li:nth-child(2) {
+    padding-top: 1em;
+}
+
+.nav-links li:nth-child(3) {
+    padding-top: 1em;
+}
+
+
+.loginsMo.active {
+    display: none;
+
+}
+
+.log-outMo {
+    display: none;
+}
+
+.log-outMo.active {
+    display: block;
+}
+
+.profileMo {
+    display: none;
+
+}
+
+.profileMo.active {
+    display: block;
+
+}
+
+
+
+.logins.active {
+    display: none;
+}
+
+.log-out {
+
+    display: none;
+}
+
+.profile {
+    display: none;
+}
+
+.log-out.active {
+
+    display: block;
+}
+
+.profile.active {
+    display: block;
+}
+
+
+
+
+.toggle-button {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    position: relative;
+}
+
+.hamburger {
+    width: 40px;
+    height: 2px;
+    background: #f76922;
+    transition: 0.25s ease-in-out;
+    border-radius: 10px;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background: #f76922;
+    transition: 0.5s ease-in-out;
+    border-radius: 10px;
+}
+
+.hamburger::before {
+    transform: translateY(-10px);
+}
+
+.hamburger::after {
+    transform: translate(19px, 10px);
+
+}
+
+
+
+
+#heading {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+
+#heading h1 {
+    padding-top: 1.8em;
+    font-size: 1.8em;
+    padding-left: 1.2em;
+    color: #3b3d3f;
+}
+
+.benefits {
+    display: flex;
+    justify-content: center;
+    padding-top: 3em;
+    padding-bottom: 6em;
+}
+
+.benefits>* {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 23em;
+}
+
+
+#icons1 img {
+    padding-bottom: 1.3em;
+    width: 5em;
+    height: auto;
+}
+
+#icons2 img {
+    padding-bottom: 2em;
+    width: 9em;
+    height: auto;
+
+}
+
+#icons3 img {
+    padding-top: 1em;
+    padding-bottom: 2em;
+    width: 9em;
+    height: auto;
+
+}
+
+#iconsOne img {
+    margin-bottom: 3em;
+    width: 9em;
+    height: auto;
+}
+
+#iconsTwo img {
+    margin-bottom: 1.4em;
+    width: 7em;
+    height: auto;
+
+}
+
+#iconsThree img {
+    margin-bottom: 1.5em;
+    width: 12em;
+    height: auto;
+
+}
+
+
+
+.image {
+    background-image: url(./img/mountain.jpg);
+    width: 100%;
+    padding: 6em;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+
+.mobile-menu {
+    display: none;
+    overflow: hidden;
+
+}
+
+.mobile-menu a {
+    color: #f76922;
+
+}
+
+.benefits p {
+    text-align: center;
+    width: 74%;
+    font-weight: 500;
+    color: grey;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+
+
+
+.butt {
+    background-color: #f76922;
+    padding: 1em 3em 1em 3em;
+    border-radius: 100px;
+    border: white;
+    color: white;
+}
+
+.butt a {
+    color: white;
+}
+
+
+
+
+
+
+
+
+.bottom {
+    background-image: url(./img/mountain.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10em;
+    width: auto;
+}
+
+.bottom-content h3 {
+    margin-bottom: 2rem;
+    font-size: 2em;
+
+}
+
+.bottom-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    padding: 2em;
+    width: auto;
+    border-radius: 3%;
+
+}
+
+.premium-text {
+    line-height: 2.9em;
+    color: gray;
+}
+
+.premium-text p {
+    font-size: 1em;
+}
+
+.premium-text p img {
+    padding-right: 0.5em;
+}
+
+.bottom-button {
+    margin-top: 2rem;
+}
+
+.bottom-nav {
+    background-color: #1a2134;
+    display: flex;
+    justify-content: center;
+}
+
+.bottom-nav-content {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    padding: 3em 0em 3em 0em;
+
+}
+
+.bottom-nav li {
+    color: white;
+    font-weight: 100;
+}
+
+.col-content h3 {
+    padding-bottom: 1em;
+    color: #f76922;
+}
+
+.col-content li {
+    padding-bottom: 1em;
+}
+
+
+
+
+
+@media (max-width: 930px) {
+    .benefits {
+        grid-template-columns: none;
+    }
+
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .mobile-menu {
+
+        position: absolute;
+
+        top: 0;
+
+        right: 0;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: end;
+
+        background-color: white;
+
+        justify-content: flex-start;
+
+        min-height: 60vh;
+
+        min-width: 30%;
+
+        transform: translateX(100%);
+
+    }
+
+    .open.hamburger {
+        background: transparent;
+    }
+
+    .open.hamburger::before {
+        width: 40px;
+        transform: rotate(-45deg);
+    }
+
+    .open.hamburger::after {
+        width: 40px;
+        transform: rotate(45deg);
+    }
+
+    .mobile-menu li {
+        margin: 4em;
+        list-style-type: none;
+    }
+
+    .mobile-menu.active {
+        transform: translateX(0);
+        transition: ease-in-out .4s;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    #gang h1 {
+        font-size: 2em;
+    }
+
+    #gang p {
+        font-size: 1.2em;
+    }
+
+    .benefits {
+        flex-direction: column;
+        align-items: center;
+        gap: 6em;
+    }
+
+    .reviewtwo-cont {
+        flex-direction: column-reverse;
+    }
+
+    .review-cont {
+        flex-direction: column;
+    }
+
+    .review-image {
+        width: 90%;
+    }
+
+    .writ {
+        width: 90%;
+        text-align: center;
+    }
+
+    .deals {
+        flex-direction: column;
+    }
+
+    .reviewtwo-content {
+        width: 90%;
+    }
+
+    .reviewtwo-image {
+        width: 90%;
+    }
+
+    .online-reviews {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bottom {
+        padding: 0.5em;
+    }
+
+    .bottom-content h3 {
+        font-size: 1.3em;
+    }
+
+    .premium-text p {
+        font-size: 0.9em;
+    }
+
+
+    .deals img {
+        width: 22em;
+    }
+
+    .deals-div p:nth-child(4) {
+        color: #f76922;
+        font-size: 1.3em;
+        padding-bottom: 2em;
+    }
+
+
+
+
+    .bottom-nav {
+        display: flex;
+        justify-content: center;
+    }
+
+    .bottom-nav-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        padding: 1em 0em 1em 0em;
+    }
+
+    .col-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .col-content li {
+        text-align: center;
+        padding: 1em 0em 1.5em 0em;
+    }
+
+    .col-content h3 {
+        padding-top: 1.5em;
+        color: #f76922;
+    }
+
+
+    .bottom-nav li {
+        color: white;
+        font-weight: 100;
+    }
+
+
+
+}
+
+
+
+@media (max-width: 485px) {
+
+
+    #heading h1 {
+        font-size: 1.4em;
+
+    }
+
+
+    .review h3 {
+        font-size: 1.6em;
+    }
+
+
+    .review-image {
+        width: 90%;
+    }
+
+    .writ {
+        width: 90%;
+        text-align: center;
+    }
+
+
+    .deals {
+        flex-direction: column;
+    }
+
+    .reviewtwo-content h3 {
+        font-size: 1.8em;
+    }
+
+    .online-reviews-headline h3 {
+        font-size: 1.3em;
+
+    }
+
+    .online-reviews>* {
+        width: 18em;
+    }
+
+    .premium-text {
+        line-height: 2em;
+    }
+
+    .deals img {
+        width: 19em;
+    }
+
+    .deals-div p:nth-child(3) {
+        font-size: 0.8em;
+    }
+
+    .deals-div p:nth-child(4) {
+        color: #f76922;
+        font-size: 1.1em;
+
+    }
+
+}

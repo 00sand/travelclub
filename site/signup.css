@@ -1,0 +1,759 @@
+* {
+
+    padding: 0;
+
+    margin: 0;
+
+    box-sizing: border-box;
+
+    font-size: 16px;
+
+
+
+}
+
+
+
+html {
+
+    overflow-x: hidden;
+
+}
+
+
+
+body {
+
+    font-family: 'Roboto', sans-serif;
+
+    overflow-x: hidden;
+
+
+
+}
+
+
+
+a {
+
+    text-decoration: none;
+
+}
+
+
+
+li {
+
+    list-style: none;
+
+}
+
+
+
+.bottom-nav a {
+
+    color: white;
+
+}
+
+
+
+nav {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    padding: 0.6em;
+
+    background-color: white;
+
+}
+
+
+
+.nav-butt {
+
+    background-color: #f76922;
+
+    padding: 1em 2em 1em 2em;
+
+    border-radius: 100px;
+
+    border: white;
+
+    color: white;
+
+}
+
+
+
+.nav-links a {
+
+    color: #f76922;
+
+    font-size: 1.2em;
+
+}
+
+
+
+.nav-butt a {
+
+    color: white;
+
+}
+
+
+
+nav img {
+
+    width: 50px;
+
+    height: auto;
+
+    position: absolute;
+
+    left: 8%;
+
+    top: 2;
+
+
+
+}
+
+
+
+.nav-links {
+
+    display: inline-flex;
+
+    list-style-type: none;
+
+    width: 70%;
+
+    justify-content: space-around;
+
+}
+
+
+
+.nav-links li:nth-child(1) {
+
+    padding-top: 1em;
+
+}
+
+
+
+.nav-links li:nth-child(2) {
+
+    padding-top: 1em;
+
+}
+
+
+
+.nav-links li:nth-child(3) {
+
+    padding-top: 1em;
+
+}
+
+
+
+
+
+.logins.active {
+
+    display: none;
+
+}
+
+
+
+.log-out {
+
+
+
+    display: none;
+
+}
+
+
+
+.profile {
+
+    display: none;
+
+}
+
+
+
+.log-out.active {
+
+
+
+    display: block;
+
+}
+
+
+
+.profile.active {
+
+    display: block;
+
+}
+
+
+.loginsMo.active {
+    display: none;
+
+}
+
+.log-outMo {
+    display: none;
+}
+
+.log-outMo.active {
+    display: block;
+}
+
+.profileMo {
+    display: none;
+
+}
+
+.profileMo.active {
+    display: block;
+
+}
+
+
+
+
+
+.toggle-button {
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    width: 60px;
+
+    height: 60px;
+
+    cursor: pointer;
+
+    transition: 0.5s ease-in-out;
+
+    position: relative;
+
+}
+
+
+
+.hamburger {
+
+    width: 40px;
+
+    height: 2px;
+
+    background: #f76922;
+
+    transition: 0.25s ease-in-out;
+
+    border-radius: 10px;
+
+}
+
+
+
+.hamburger::before,
+
+.hamburger::after {
+
+    content: '';
+
+    position: absolute;
+
+    width: 20px;
+
+    height: 2px;
+
+    background: #f76922;
+
+    transition: 0.5s ease-in-out;
+
+    border-radius: 10px;
+
+}
+
+
+
+.hamburger::before {
+
+    transform: translateY(-10px);
+
+}
+
+
+
+.hamburger::after {
+
+    transform: translate(19px, 10px);
+
+
+
+}
+
+
+
+.intro {
+
+    position: relative;
+
+
+
+}
+
+
+
+.mobile-menu {
+
+    display: none;
+
+    overflow: hidden;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.bottom-nav {
+
+    background-color: #1a2134;
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+
+
+.bottom-nav-content {
+
+    display: flex;
+
+    justify-content: space-around;
+
+    width: 90%;
+
+    padding: 1em 0em 1em 0em;
+
+
+
+}
+
+
+
+.bottom-nav li {
+
+    color: white;
+
+    font-weight: 100;
+
+}
+
+
+
+.col-content h3 {
+
+    padding-bottom: 1em;
+
+    color: #f76922;
+
+}
+
+
+
+.col-content li {
+
+    padding-bottom: 1em;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+.container {
+
+    display: flex;
+
+    justify-content: center;
+
+    background-color: white;
+
+
+
+}
+
+
+
+.main-card {
+
+    display: flex;
+
+    width: 100%;
+
+
+
+}
+
+
+
+.form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background-color: #c3eefa;
+
+    padding: 5em 0em 5em 0em;
+
+}
+
+
+
+.card-one {
+
+    width: 100%;
+
+}
+
+
+
+.main-card h1 {
+
+    font-size: 3em;
+
+    font-family: sans-serif;
+
+    padding-bottom: 0.8em;
+
+    color: #f76922;
+
+}
+
+
+
+label {
+
+    font-family: "Poppins", sans-serif;
+
+}
+
+
+
+input,
+
+label {
+
+    display: block;
+
+}
+
+
+
+.form-input {
+
+    padding: 0.8em;
+
+}
+
+
+
+input {
+
+    width: 100%;
+
+    outline: 0;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5%;
+
+    padding: 1em;
+
+    font-size: 16px;
+
+}
+
+
+
+#signUp {
+
+    background-color: #f76922;
+
+    filter: drop-shadow(2px 2px 3px #0003);
+
+    color: white;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 1.1em;
+
+    padding: 0.4em 2em 0.4em 2em;
+
+    border: none;
+
+    border-radius: 5%;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+
+#signUp:hover {
+
+    transform: scale(1.1, 1.1);
+
+}
+
+
+
+#signUp:active {
+
+    transform: scale(1.1, 1.1);
+
+    filter: sepia(0.5);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 930px) {
+
+    .benefits {
+
+        grid-template-columns: none;
+
+    }
+
+
+
+    .toggle-button {
+
+        display: flex;
+
+    }
+
+
+
+    .mobile-menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        background-color: white;
+        justify-content: flex-start;
+        min-height: 50vh;
+        min-width: 30%;
+        transform: translateX(100%);
+    }
+
+
+    .mobile-menu a {
+        color: #f76922;
+
+    }
+
+
+
+    .open.hamburger {
+
+        background: transparent;
+
+    }
+
+
+
+    .open.hamburger::before {
+
+        width: 40px;
+
+        transform: rotate(-45deg);
+
+    }
+
+
+
+    .open.hamburger::after {
+
+        width: 40px;
+
+        transform: rotate(45deg);
+
+    }
+
+
+
+    .mobile-menu li {
+
+        margin: 4em;
+
+        list-style-type: none;
+
+    }
+
+
+
+    .mobile-menu.active {
+
+        transform: translateX(0);
+
+        transition: ease-in-out .4s;
+
+    }
+
+
+
+    .nav-links {
+
+        display: none;
+
+    }
+
+
+
+    .bottom-nav {
+
+        display: flex;
+
+        justify-content: center;
+
+    }
+
+
+
+    .bottom-nav-content {
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        align-items: center;
+
+        width: 90%;
+
+        padding: 1em 0em 1em 0em;
+
+    }
+
+
+
+    .col-content {
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        align-items: center;
+
+
+
+    }
+
+
+
+    .col-content li {
+
+        text-align: center;
+
+        padding: 1em 0em 1.5em 0em;
+
+    }
+
+
+
+    .col-content h3 {
+
+        padding-top: 1.5em;
+
+        color: #f76922;
+
+    }
+
+
+
+    .bottom-nav li {
+
+        color: white;
+
+        font-weight: 100;
+
+    }
+
+
+
+
+
+
+
+}
