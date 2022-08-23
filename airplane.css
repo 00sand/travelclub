@@ -1,0 +1,855 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.bottom-nav a {
+    color: white;
+}
+
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.6em;
+    background-color: white;
+}
+
+
+.nav-butt {
+    background-color: #f76922;
+    padding: 1em 2em 1em 2em;
+    border-radius: 100px;
+    border: white;
+    color: white;
+}
+
+
+.nav-butt:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.nav-butt:active {
+    transform: scale(1.1, 1.1);
+    filter: sepia(0.5);
+}
+
+
+
+
+.nav-links a {
+    color: #f76922;
+    font-size: 1.2em;
+}
+
+.nav-butt a {
+    color: white;
+}
+
+
+nav img {
+    width: 50px;
+    height: auto;
+    position: absolute;
+    left: 8%;
+    top: 1.8%;
+}
+
+.nav-links {
+    display: inline-flex;
+    list-style-type: none;
+    width: 70%;
+    justify-content: space-around;
+}
+
+
+.nav-links li:nth-child(1) {
+    padding-top: 1em;
+}
+
+.nav-links li:nth-child(2) {
+    padding-top: 1em;
+}
+
+.nav-links li:nth-child(3) {
+    padding-top: 1em;
+}
+
+
+
+.loginsMo.active {
+    display: none;
+
+}
+
+.log-outMo {
+    display: none;
+}
+
+.log-outMo.active {
+    display: block;
+}
+
+.profileMo {
+    display: none;
+
+}
+
+.profileMo.active {
+    display: block;
+
+}
+
+
+
+.logins.active {
+    display: none;
+}
+
+.log-out {
+
+    display: none;
+}
+
+.profile {
+    display: none;
+}
+
+.log-out.active {
+
+    display: block;
+}
+
+.profile.active {
+    display: block;
+}
+
+
+
+
+.toggle-button {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    position: relative;
+}
+
+.hamburger {
+    width: 40px;
+    height: 2px;
+    background: #f76922;
+    transition: 0.25s ease-in-out;
+    border-radius: 10px;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background: #f76922;
+    transition: 0.5s ease-in-out;
+    border-radius: 10px;
+}
+
+.hamburger::before {
+    transform: translateY(-10px);
+}
+
+.hamburger::after {
+    transform: translate(19px, 10px);
+
+}
+
+.intro {
+    background-image: url(./img/air1j.jpg);
+    width: 100%;
+    min-height: 98vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#bio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
+}
+
+#bio h1 {
+    color: #f76922;
+
+    font-size: 2.5em;
+    padding-bottom: 1em;
+    text-align: center;
+}
+
+#bio p {
+    color: #f76922;
+
+    line-height: 1.5em;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#heading {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+
+#heading h1 {
+    padding-top: 3em;
+    font-size: 1.8em;
+    padding-left: 1.2em;
+    color: #3b3d3f;
+}
+
+.benefits {
+    display: flex;
+    justify-content: center;
+    padding-top: 5em;
+}
+
+.benefits>* {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 23em;
+}
+
+
+#icons1 img {
+    margin-bottom: 3em;
+    width: 11em;
+    height: auto;
+}
+
+#icons2 img {
+    margin-bottom: 1.6em;
+    width: 7.9em;
+    height: auto;
+
+}
+
+#icons3 img {
+    margin-bottom: 2.8em;
+    width: 12em;
+    height: auto;
+
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.benefits p {
+    text-align: center;
+    width: 74%;
+    font-weight: 500;
+    color: grey;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+.review {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: #f4f6fa;
+    padding: 3em 0em 3em 0em;
+
+}
+
+.review-cont {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    gap: 2em;
+    align-items: center;
+}
+
+.review-image {
+    width: 50%;
+}
+
+
+.review-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 2%;
+}
+
+
+.writ {
+    width: 40%;
+}
+
+.writ p {
+    line-height: 1.9em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+
+.review h3 {
+    font-weight: 500;
+    font-size: 2.7em;
+    color: #3b3d3f;
+
+}
+
+.review p {
+    font-weight: 500;
+    color: gray;
+}
+
+
+
+.deals-headline {
+    display: flex;
+    font-weight: 500;
+    width: 100%;
+    justify-content: center;
+    padding: 5em 0em 3.5em 0em;
+    background-color: #f4f6fa;
+}
+
+.deals-headline h3 {
+    font-size: 1.5em;
+    color: #3b3d3f;
+    text-align: center;
+}
+
+.deals {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    padding: 0em 5em 0em 5em;
+    background-color: #f4f6fa;
+}
+
+.deals-div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    line-height: 1.4em;
+}
+
+.deals-div img {
+    padding-bottom: 1em;
+}
+
+.deals-div p:nth-child(2) {
+    font-size: 1.1em;
+}
+
+.deals-div p:nth-child(3) {
+    text-decoration: line-through;
+    font-size: 0.9em;
+}
+
+.deals-div p:nth-child(4) {
+    color: #f76922;
+    font-size: 1.2em;
+}
+
+
+.deals img {
+    width: 13em;
+    height: auto;
+}
+
+
+.deals-button {
+    display: flex;
+    justify-content: center;
+    padding: 2.5em 0em 7em 0em;
+}
+
+.deals-button-2 {
+    display: flex;
+    justify-content: center;
+    padding: 2.5em 0em 4em 0em;
+    background-color: #f4f6fa;
+
+}
+
+.butt {
+    background-color: #f76922;
+    padding: 1em 3em 1em 3em;
+    border-radius: 100px;
+    border: white;
+    color: white;
+}
+
+
+.butt a {
+    color: white;
+}
+
+
+
+
+.butt:hover {
+    transform: scale(1.1, 1.1);
+    cursor: pointer;
+}
+
+.butt:active {
+    transform: scale(1.1, 1.1);
+    filter: sepia(0.5);
+}
+
+.reviewtwo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 3em 0em 3em 0em;
+}
+
+.reviewtwo-cont {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    gap: 3em;
+    align-items: center;
+}
+
+.reviewtwo h3 {
+    font-weight: 500;
+    font-size: 2.7em;
+    color: #3b3d3f;
+}
+
+.reviewtwo p {
+    font-weight: 500;
+    color: gray;
+    line-height: 1.9em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+
+.reviewtwo-content {
+    width: 40%;
+    text-align: center;
+}
+
+.reviewtwo-image {
+    width: 50%;
+}
+
+.reviewtwo-image img {
+    border-radius: 2%;
+    max-width: 100%;
+    height: auto;
+}
+
+
+.online-reviews-headline {
+    display: flex;
+    font-weight: 500;
+    width: 100%;
+    justify-content: center;
+    padding: 7rem 0rem 5rem 0rem;
+    background-color: #f4f6fa;
+}
+
+.online-reviews-headline h3 {
+    font-size: 1.9em;
+    color: #3b3d3f;
+    text-align: center;
+
+}
+
+.online-reviews {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding-bottom: 10em;
+    background-color: #f4f6fa;
+}
+
+.online-reviews>* {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 23em;
+}
+
+.speech {
+    text-align: center;
+    font-weight: 500;
+    color: grey;
+    line-height: 1.8em;
+    background-color: white;
+    padding: 2em 0em 2em 0em;
+    border-radius: 7%;
+}
+
+.speech p {
+    font-size: 0.9em;
+}
+
+
+.stars {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0rem 0rem 0rem;
+}
+
+.stars img {
+    width: 4rem;
+    height: auto;
+    padding-bottom: 1rem;
+}
+
+
+.bottom {
+    background-image: url(./img/bottom-image.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10em;
+    width: auto;
+}
+
+.bottom-content h3 {
+    margin-bottom: 2rem;
+    font-size: 2em;
+
+}
+
+.bottom-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    padding: 2em;
+    width: auto;
+    border-radius: 3%;
+
+}
+
+.premium-text {
+    line-height: 2.9em;
+    color: gray;
+}
+
+.premium-text p {
+    font-size: 1em;
+}
+
+.premium-text p img {
+    padding-right: 0.5em;
+}
+
+.bottom-button {
+    margin-top: 2rem;
+}
+
+.bottom-nav {
+    background-color: #1a2134;
+    display: flex;
+    justify-content: center;
+}
+
+.bottom-nav-content {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    padding: 3em 0em 3em 0em;
+
+}
+
+.bottom-nav li {
+    color: white;
+    font-weight: 100;
+}
+
+.col-content h3 {
+    padding-bottom: 1em;
+    color: #f76922;
+}
+
+.col-content li {
+    padding-bottom: 1em;
+}
+
+
+
+
+
+@media (max-width: 930px) {
+    .benefits {
+        grid-template-columns: none;
+    }
+
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .mobile-menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        background-color: white;
+        justify-content: flex-start;
+        min-height: 50vh;
+        min-width: 30%;
+        transform: translateX(100%);
+    }
+
+    .open.hamburger {
+        background: transparent;
+    }
+
+    .open.hamburger::before {
+        width: 40px;
+        transform: rotate(-45deg);
+    }
+
+    .open.hamburger::after {
+        width: 40px;
+        transform: rotate(45deg);
+    }
+
+    .mobile-menu a {
+        color: #f76922;
+
+    }
+
+    .mobile-menu li {
+        margin: 4em;
+        list-style-type: none;
+    }
+
+    .mobile-menu.active {
+        transform: translateX(0);
+        transition: ease-in-out .4s;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    #bio h1 {
+        font-size: 2em;
+    }
+
+    #bio p {
+        font-size: 1.2em;
+    }
+
+    .benefits {
+        flex-direction: column;
+        align-items: center;
+        gap: 6em;
+    }
+
+    .reviewtwo-cont {
+        flex-direction: column-reverse;
+    }
+
+    .review-cont {
+        flex-direction: column;
+    }
+
+    .review-image {
+        width: 90%;
+    }
+
+    .writ {
+        width: 90%;
+        text-align: center;
+    }
+
+    .deals {
+        flex-direction: column;
+    }
+
+    .reviewtwo-content {
+        width: 90%;
+    }
+
+    .reviewtwo-image {
+        width: 90%;
+    }
+
+    .online-reviews {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bottom {
+        padding: 0.5em;
+    }
+
+    .bottom-content h3 {
+        font-size: 1.3em;
+    }
+
+    .premium-text p {
+        font-size: 0.9em;
+    }
+
+
+    .deals img {
+        width: 22em;
+    }
+
+    .deals-div p:nth-child(4) {
+        color: #f76922;
+        font-size: 1.3em;
+        padding-bottom: 2em;
+    }
+
+
+
+
+    .bottom-nav {
+        display: flex;
+        justify-content: center;
+    }
+
+    .bottom-nav-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        padding: 1em 0em 1em 0em;
+    }
+
+    .col-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .col-content li {
+        text-align: center;
+        padding: 1em 0em 1.5em 0em;
+    }
+
+    .col-content h3 {
+        padding-top: 1.5em;
+        color: #f76922;
+    }
+
+
+    .bottom-nav li {
+        color: white;
+        font-weight: 100;
+    }
+
+
+
+}
+
+
+
+@media (max-width: 485px) {
+
+
+    #heading h1 {
+        font-size: 1.4em;
+
+    }
+
+
+    .review h3 {
+        font-size: 1.6em;
+    }
+
+
+    .review-image {
+        width: 90%;
+    }
+
+    .writ {
+        width: 90%;
+        text-align: center;
+    }
+
+
+    .deals {
+        flex-direction: column;
+    }
+
+    .reviewtwo-content h3 {
+        font-size: 1.8em;
+    }
+
+    .online-reviews-headline h3 {
+        font-size: 1.3em;
+
+    }
+
+    .online-reviews>* {
+        width: 18em;
+    }
+
+    .premium-text {
+        line-height: 2em;
+    }
+
+    .deals img {
+        width: 19em;
+    }
+
+    .deals-div p:nth-child(3) {
+        font-size: 0.8em;
+    }
+
+    .deals-div p:nth-child(4) {
+        color: #f76922;
+        font-size: 1.1em;
+
+    }
+
+}

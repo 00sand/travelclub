@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="about.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="intro">
+        <nav>
+            <a href="./airplane.html"><img src="./img/logo.png" alt=""></img></a>
+
+            <ul class='nav-links'>
+                <li>
+                    <a href="./about.html">About</a>
+                </li>
+                <li>
+                    <a href="./contact.html">Contact</a>
+                </li>
+
+                <li class='profile'>
+                    <a href="./profile.html">Profile</a>
+                </li>
+
+                <li class='logins'>
+                    <button class='nav-butt'><a href="./login.html">Login</a></button>
+
+                </li>
+                <li class='log-out'>
+                    <button class='nav-butt'><a href="#">logout</a></button>
+                </li>
+            </ul>
+
+            <div class='mobile-menu'>
+                <ul>
+                    <li>
+                        <a href="./about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="./contact.html">Contact</a>
+                    </li>
+
+                    <li class='profileMo'>
+                        <a href="./profile.html">Profile</a>
+                    </li>
+
+                    <li class='loginsMo'>
+                        <a href="./login.html">Login</a>
+
+                    </li>
+                    <li class='log-outMo'>
+                        <a href="#">Logout</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class='toggle-button'>
+                <div class='hamburger'></div>
+            </div>
+        </nav>
+
+    </section>
+
+
+    <section class='bottom'>
+        <div class='bottom-content'>
+            <h3>Pack your bags. You're going on vacation.</h3>
+            <div class='premium-text'>
+                <p> <img src="./img/tick.svg" alt="">All the best flight deals to the most popular destinations</p>
+            </div>
+            <div class='premium-text'>
+                <p> <img src="./img/tick.svg" alt="">Urgent alerts when airlines accidentally offer flights up to 90%
+                </p>
+            </div>
+            <div class='premium-text'>
+                <p> <img src="./img/tick.svg" alt="">Peak season & holiday travel deals</p>
+            </div>
+            <div class='bottom-button'>
+                <button class='butt'><a href="./signup.html">Sign Up</a></button>
+            </div>
+        </div>
+    </section>
+
+
+    <div id='heading'>
+        <h1>We find cheap deals with your comfort in mind</h1>
+    </div>
+    <section class='benefits'>
+        <div id='icons1'>
+            <img src="./img/about-mail.gif" alt="">
+            <p>
+                All flight deals sent, will be for flights departing Vancouver. Which doesn't neccarisly mean all deals
+                will be departing from YVR</p>
+        </div>
+        <div id='icons2'>
+
+            <img src="./img/about-airplane.gif" alt="">
+            <p>
+                Our team of Flight Experts will email you whenever there's an amazing deal from an airport you follow.
+            </p>
+        </div>
+        <div id='icons3'>
+
+            <img src="./img/screen.gif" alt="">
+            <p>
+                Deal alerts include a booking link, price details, and estimate how long the deal might last. Don't
+                dilly dally!
+            </p>
+        </div>
+    </section>
+
+
+
+    <section>
+        <div class='image'>
+        </div>
+    </section>
+
+    <div id='heading'>
+        <h1>We do the hard work for you</h1>
+    </div>
+    <section class='benefits'>
+        <div id='iconsOne'>
+            <img src="./img/gif.ticket.gif" alt="">
+            <p>
+                Most deals are 40-90% off normal prices. If it's not an amazing deal, we won't send it. Period.</p>
+        </div>
+        <div id='iconsTwo'>
+
+            <img src="./img/globe.gif" alt="">
+            <p>
+                Most deals are for non-stop or single-stop flights. Occasionally even business class. </p>
+        </div>
+        <div id='iconsThree'>
+
+            <img src="./img/plane.gif" alt="">
+            <p>
+                We avoid bad airlines and highlight deals on top-rated airlines so you travel in comfort.
+            </p>
+        </div>
+    </section>
+    <section class='bottom-nav'>
+        <div class='bottom-nav-content'>
+            <div class='col-content'>
+                <h3>About</h3>
+                <ul>
+                    <li><a href="#">Member Stories</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Premium</a></li>
+                    <li><a href="#">Swag</a></li>
+                </ul>
+            </div>
+
+            <div class='col-content'>
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </div>
+            <div class='col-content'>
+                <h3>Resources</h3>
+                <li><a href="#">Guides</a></li>
+                <li><a href="#">How to Find Cheap Flights</a></li>
+                <li><a href="#">Travel Glossary</a></li>
+                <li><a href="#">Study Abroad Scholarship</a></li>
+                <li><a href="#">Travel Community</a></li>
+            </div>
+            <div class='col-content'>
+                <h3>Socials</h3>
+                <ul>
+                    <li><a href="#">press</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script src="airplane.js"></script>
+</body>
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-app.js";
+    import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-database.js";
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-auth.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyA5IMcRUWmrsNqOUJgtmMPLCusn_mK1idM",
+        authDomain: "ferry-76964.firebaseapp.com",
+        databaseURL: "https://ferry-76964-default-rtdb.firebaseio.com",
+        projectId: "ferry-76964",
+        storageBucket: "ferry-76964.appspot.com",
+        messagingSenderId: "135531743961",
+        appId: "1:135531743961:web:6c55eb8e4f4a69b820ccc8"
+    };
+    var logins = document.querySelector('.logins')
+    var logouts = document.querySelector('.log-out')
+    var profile = document.querySelector('.profile')
+
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+    const auth = getAuth();
+    var logins = document.querySelector('.logins')
+    var logouts = document.querySelector('.log-out')
+    var profile = document.querySelector('.profile')
+
+    var loginsMo = document.querySelector('.loginsMo')
+    var logoutsMo = document.querySelector('.log-outMo')
+    var profileMo = document.querySelector('.profileMo')
+
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+            logins.classList.add('active')
+            logouts.classList.add('active')
+            profile.classList.add('active')
+
+            loginsMo.classList.add('active')
+            logoutsMo.classList.add('active')
+            profileMo.classList.add('active')
+        } else {
+            logins.classList.remove('active')
+            logouts.classList.remove('active')
+            profile.classList.remove('active')
+
+            loginsMo.classList.remove('active')
+            logoutsMo.classList.remove('active')
+            profileMo.classList.remove('active')
+
+
+        }
+    });
+
+    logouts.addEventListener('click', (e) => {
+        signOut(auth).then(() => {
+            window.location = 'airplane.html'
+        }).catch((error) => {
+            alert(error)
+        });
+
+    })
+
+
+
+</script>
+
+
+</html>

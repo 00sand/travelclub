@@ -1,0 +1,211 @@
+<html>
+
+<head>
+    <title>Firebase Authentication</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+
+
+<body>
+    <section class='intro'>
+        <nav>
+            <a href="./airplane.html"><img src="./img/logo.png" alt=""></img></a>
+            <ul class='nav-links'>
+                <li>
+                    <a href="./about">About</a>
+                </li>
+                <li>
+                    <a href="./contact.html">Contact</a>
+                </li>
+
+                <li class='profile'>
+                    <a href="./profile.html">Profile</a>
+                </li>
+
+                <li class='logins'>
+                    <button class='nav-butt'><a href="./login.html">Login</a></button>
+
+                </li>
+                <li class='log-out'>
+                    <button class='nav-butt'><a href="#">logout</a></button>
+                </li>
+            </ul>
+
+            <div class='mobile-menu'>
+                <ul>
+                    <li>
+                        <a href="./about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="./contact.html">Contact</a>
+                    </li>
+
+                    <li class='profileMo'>
+                        <a href="./profile.html">Profile</a>
+                    </li>
+
+                    <li class='loginsMo'>
+                        <a href="./login.html">Login</a>
+
+                    </li>
+                    <li class='log-outMo'>
+                        <a href="#">logout</a>
+                    </li>
+                </ul>
+            </div>
+            <div class='toggle-button'>
+                <div class='hamburger'></div>
+            </div>
+        </nav>
+
+    </section>
+    <section class='container'>
+        <div class='main-card'>
+            <div class='card-one'>
+                <form action="" method="get" class="form">
+                    <h1>Edit Profile</h1>
+                    <div class="form-input">
+                        <label for="email">Email: </label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <div class="form-button">
+                        <button id='btn'>Update Email</button>
+                    </div>
+                    <div class="form-input">
+                        <label for="password">Password: </label>
+                        <input type="text" name="password" id="password" required>
+                    </div>
+
+                    <div class="form-button">
+                        <button id='btnOne'>Update Password</button>
+                    </div>
+            </div>
+            </form>
+        </div>
+        </div>
+
+    </section>
+    <section class='bottom-nav'>
+        <div class='bottom-nav-content'>
+            <div class='col-content'>
+                <h3>About</h3>
+                <ul>
+                    <li><a href="#">Member Stories</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Premium</a></li>
+                    <li><a href="#">Swag</a></li>
+                </ul>
+            </div>
+
+            <div class='col-content'>
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </div>
+            <div class='col-content'>
+                <h3>Resources</h3>
+                <li><a href="#">Guides</a></li>
+                <li><a href="#">How to Find Cheap Flights</a></li>
+                <li><a href="#">Travel Glossary</a></li>
+                <li><a href="#">Study Abroad Scholarship</a></li>
+                <li><a href="#">Travel Community</a></li>
+            </div>
+            <div class='col-content'>
+                <h3>Socials</h3>
+                <ul>
+                    <li><a href="#">press</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script src="airplane.js"></script>
+</body>
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-app.js";
+    import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-database.js";
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut, updateEmail, updatePassword } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-auth.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyA5IMcRUWmrsNqOUJgtmMPLCusn_mK1idM",
+        authDomain: "ferry-76964.firebaseapp.com",
+        databaseURL: "https://ferry-76964-default-rtdb.firebaseio.com",
+        projectId: "ferry-76964",
+        storageBucket: "ferry-76964.appspot.com",
+        messagingSenderId: "135531743961",
+        appId: "1:135531743961:web:6c55eb8e4f4a69b820ccc8"
+    };
+
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+    const auth = getAuth();
+
+    var display = document.querySelector('.display')
+    let email = document.getElementById('email');
+    var password = document.getElementById('password');
+    var logins = document.querySelector('.logins')
+    var logouts = document.querySelector('.log-out')
+    var profile = document.querySelector('.profile')
+
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+            logins.classList.add('active')
+            logouts.classList.add('active')
+            profile.classList.add('active')
+        } else {
+            logins.classList.remove('active')
+            logouts.classList.remove('active')
+            profile.classList.remove('active')
+        }
+    });
+
+    btn.addEventListener('click', (auth) => {
+        if (email.value.length == 0) {
+            email.value = "Empty";
+        } else {
+            console.log(email.value)
+        }
+        updateEmail(auth.currentUser, `${email.value}`).then(() => {
+            email: email
+            alert('Email Updated')
+        }).catch((error) => {
+            // An error occurred
+            alert(error)
+            // ...
+        });
+    })
+
+
+    btnOne.addEventListener('click', (auth) => {
+        const newPassword = getASecureRandomPassword();
+        updatePassword(auth.currentUser, newPassword).then(() => {
+            alert('Password Updated')
+        }).catch((error) => {
+            // An error ocurred
+            alert(error)
+        });
+    })
+
+
+    logouts.addEventListener('click', (e) => {
+        signOut(auth).then(() => {
+            window.location = 'airplane.html'
+        }).catch((error) => {
+            alert(error)
+        });
+
+    })
+
+</script>
+
+</html>
