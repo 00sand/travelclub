@@ -108,6 +108,34 @@ nav img {
     display: block;
 }
 
+.loginsMo.active {
+    display: none;
+
+}
+
+.log-outMo {
+    display: none;
+}
+
+.log-outMo.active {
+    display: block;
+}
+
+.profileMo {
+    display: none;
+
+}
+
+.profileMo.active {
+    display: block;
+
+}
+
+.mobile-menu a {
+    color: #f76922;
+
+}
+
 
 
 
@@ -205,7 +233,6 @@ nav img {
 
 
 
-
 .container {
     display: flex;
     justify-content: center;
@@ -265,6 +292,7 @@ textarea {
 
 .form-button {
     padding-bottom: 3em;
+
 }
 
 
@@ -281,6 +309,8 @@ textarea {
     border-radius: 5%;
     cursor: pointer;
     transition: 0.2s;
+
+
 }
 
 #btn:hover,
@@ -299,15 +329,8 @@ textarea {
 
 
 
-
-
-
-
-
-
-
-
 @media (max-width: 930px) {
+
     .benefits {
         grid-template-columns: none;
     }
@@ -324,11 +347,12 @@ textarea {
         display: flex;
         flex-direction: column;
         align-items: end;
-        background-color: gray;
+        background-color: white;
         justify-content: flex-start;
-        min-height: 60vh;
+        min-height: 50vh;
         min-width: 30%;
         transform: translateX(100%);
+
     }
 
     .open.hamburger {
