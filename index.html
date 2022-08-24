@@ -324,6 +324,14 @@
         });
 
     })
+      logoutsMo.addEventListener('click', (e) => {
+        signOut(auth).then(() => {
+            window.location = 'index.html'
+        }).catch((error) => {
+            alert(error)
+        });
+
+    })
 
 
 
