@@ -1,6 +1,9 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Firebase Authentication</title>
     <link rel="stylesheet" href="profile.css">
 </head>
@@ -157,15 +160,29 @@
     var logouts = document.querySelector('.log-out')
     var profile = document.querySelector('.profile')
 
+    var loginsMo = document.querySelector('.loginsMo')
+    var logoutsMo = document.querySelector('.log-outMo')
+    var profileMo = document.querySelector('.profileMo')
+
     onAuthStateChanged(auth, (user) => {
         if (user) {
             logins.classList.add('active')
             logouts.classList.add('active')
             profile.classList.add('active')
+
+            loginsMo.classList.add('active')
+            logoutsMo.classList.add('active')
+            profileMo.classList.add('active')
         } else {
             logins.classList.remove('active')
             logouts.classList.remove('active')
             profile.classList.remove('active')
+
+            loginsMo.classList.remove('active')
+            logoutsMo.classList.remove('active')
+            profileMo.classList.remove('active')
+
+
         }
     });
 
