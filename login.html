@@ -1,7 +1,10 @@
 <html>
 
 <head>
-    <title>Firebase Authentication</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="login.css">
 </head>
 
@@ -31,18 +34,33 @@
                 </li>
             </ul>
 
+
             <div class='mobile-menu'>
+
                 <ul>
+
                     <li>
-                        <a href="#">Home</a>
+                        <a href="./about.html">About</a>
                     </li>
                     <li>
-                        <a href="#">About</a>
+                        <a href="./contact.html">Contact</a>
                     </li>
-                    <li>
-                        <a href="#">Contact</a>
+
+                    <li class='profileMo'>
+                        <a href="./profile.html">Profile</a>
                     </li>
+
+                    <li class='loginsMo'>
+                        <a href="./login.html">Login</a>
+
+                    </li>
+                    <li class='log-outMo'>
+                        <a href="#">Logout</a>
+                    </li>
+
                 </ul>
+
+
 
             </div>
             <div class='toggle-button'>
@@ -140,9 +158,16 @@
     const database = getDatabase(app);
     const auth = getAuth();
 
-    var login = document.querySelector('#login')
+    var logins = document.querySelector('.logins')
+    var logouts = document.querySelector('.log-out')
+    var profile = document.querySelector('.profile')
 
-    login.addEventListener('click', (e) => {
+    var loginsMo = document.querySelector('.loginsMo')
+    var logoutsMo = document.querySelector('.log-outMo')
+    var profileMo = document.querySelector('.profileMo')
+
+
+    logins.addEventListener('click', (e) => {
         var email = document.getElementById('email').value;
         var password = document.getElementById('password').value;
 
@@ -172,6 +197,39 @@
 
 
     });
+
+
+    loginsMo.addEventListener('click', (e) => {
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+
+        signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                // Signed in 
+                const user = userCredential.user;
+
+                const dt = new Date();
+                update(ref(database, 'users/' + user.uid), {
+                    last_login: dt,
+
+                })
+
+                if (user) {
+                    window.location = 'index.html'
+                }
+
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+
+                alert(errorMessage);
+            });
+
+
+
+    });
+
 
 
 </script>
