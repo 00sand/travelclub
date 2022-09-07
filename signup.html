@@ -297,7 +297,7 @@
 
 
 
-    signUp.addEventListener('click', (e) => {
+     signUp.addEventListener('click', (e) => {
 
 
 
@@ -305,53 +305,62 @@
 
         var password = document.getElementById('password').value;
 
-
-
-        createUserWithEmailAndPassword(auth, email, password)
-
-            .then((userCredential) => {
+        var passwordCon = document.getElementById('passwordCon').value;
 
 
 
-                const user = userCredential.user;
 
 
 
-                set(ref(database, 'users/' + user.uid), {
+        if (password === passwordCon) {
 
-                    email: email,
+            createUserWithEmailAndPassword(auth, email, password)
 
-                    password: password
+                .then((userCredential) => {
+
+
+
+                    const user = userCredential.user;
+
+
+
+                    set(ref(database, 'users/' + user.uid), {
+
+                        email: email,
+
+                        password: password
+
+                    })
+
+
+
+                    alert('user created!');
+
+                    if (user) {
+                        window.location = 'index.html'
+                    }
+
+
 
                 })
 
+                .catch((error) => {
 
+                    const errorCode = error.code;
 
-                alert('user created!');
-
-                if (user) {
-                    window.location = 'index.html'
-                }
-
-
-
-            })
-
-            .catch((error) => {
-
-                const errorCode = error.code;
-
-                const errorMessage = error.message;
+                    const errorMessage = error.message;
 
 
 
-                alert(errorMessage);
+                    alert(errorMessage);
 
 
 
-            });
+                });
+        } else {
+            alert('Passwords do not match')
+        }
     })
-
 
 
 
